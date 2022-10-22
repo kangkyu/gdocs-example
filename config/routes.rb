@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "users#index"
 
-  resource :session, only: [:new]
+  resource :session, only: [:new, :destroy]
   get '/auth/google_oauth2/callback', to: "sessions#auth"
 end

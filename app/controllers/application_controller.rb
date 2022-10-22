@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
 
   def ensure_signed_out
     if signed_in?
-      redirect_to session[:redirect_to] || root_url
+      redirect_to(root_url)
     end
   end
 
