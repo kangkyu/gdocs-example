@@ -1,0 +1,8 @@
+<% @users.each do |user| %>
+  <%= user.email %>
+  <%= button_to "LOGOUT", session_path, method: :delete %>
+<% end %>
+
+<hr>
+
+<%= link_to "LOGIN", new_session_path, method: :get %>
